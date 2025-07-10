@@ -64,7 +64,7 @@ Your task is to analyze the document and create a short, direct, clear, and conc
     headers = {
         "Authorization": f"Bearer {api}",
         "Content-Type": "application/json",
-        "HTTP-Referer": "https://your-project-url.com",  # Replace this with your frontend URL or GitHub repo
+        "HTTP-Referer": "https://policy-mate-frontend.vercel.app",  # Replace this with your frontend URL or GitHub repo
     }
 
     data = {
