@@ -78,7 +78,7 @@ Your task is to analyze the document and create a short, direct, clear, and conc
     }
 
     try:
-        response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data)
+        response = requests.post("https://openrouter.ai/api/v1", headers=headers, json=data)
         response.raise_for_status()
         result = response.json()
         return result["choices"][0]["message"]["content"].strip()

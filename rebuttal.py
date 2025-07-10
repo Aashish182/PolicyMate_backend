@@ -94,7 +94,7 @@ def call_openrouter(prompt, system_message="You are a helpful insurance expert."
     }
 
     try:
-        response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data)
+        response = requests.post("https://openrouter.ai/api/v1", headers=headers, json=data)
         response.raise_for_status()
         result = response.json()
         return result["choices"][0]["message"]["content"].strip()

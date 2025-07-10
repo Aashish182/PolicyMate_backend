@@ -105,7 +105,7 @@ def verify_from_pdf(pdf_text, claim):
     }
 
     try:
-        response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data)
+        response = requests.post("https://openrouter.ai/api/v1", headers=headers, json=data)
         response.raise_for_status()
         result = response.json()
         return {'verify': result["choices"][0]["message"]["content"].strip()}
